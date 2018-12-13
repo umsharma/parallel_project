@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="utf-8" />
+    <title>PAN CARD: User Information</title>
+	<script language="javascript">
+	function validateMobNo(mobno){
+	var pattern = /^([7-9]{1})([0-9]{9})$/;
+	 if (!pattern.test(mobno)) {
+          return false;
+    }
+    else {
+        return true;
+    }
+	}
+	function validateDoB(dob){
+	var pattern = /^([0-9]{2})-([0-9]{2})-([0-9]{4})$/;
+    if (!pattern.test(dob)) {
+          return false;
+    }
+    else {
+        return true;
+    }
+	}
+	function validateMail(mail){
+	var email=/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
+	if(email.test(mail))
+	return true;
+	else
+	return false;
+	}
+	function chkEmpty(){
+
+	if(document.frm.txtNM.value==""){
+	alert("Please fill the Applicant Name ");
+	return false;}
+	else if(document.frm.txtFName.value==""){alert("Please fill the First Name ");
+	return false;}
+	else if(document.frm.txtLName.value==""){alert("Please fill the Last Name ");
+	return false;}
+	else if(document.frm.txtFtName.value==""){alert("Please fill the Father Name ");
+	return false;}
+	else if(document.frm.txtDOB.value==""){alert("Please fill the DOB");return false;}
+	else if(validateDoB(document.frm.txtDOB.value)==false){
+	alert("Please Enter valid date(dd-MM-yyyy)");
+	return false;
+	}
+	else if(document.frm.rdbML.checked==false && document.frm.rdbFML.checked==false){
+		alert("Please select the Gender");
+	return false;
+		}
+	else if(document.frm.txtMNo.value==""){alert("Please fill Mobile no");
+	return false;}
+	else if(validateMobNo(document.frm.txtMNo.value)==false){alert("Please enter valid mobile no");
+	return false;}
+	else if(document.frm.txtEmailID.value=="") {
+	alert("Please fill the Email id ");
+	return false;
+	}
+	else if(validateMail(document.frm.txtEmailID.value)==false){
+	alert("Please enter valid Email id");
+	return false;
+	}
+	else if (document.frm.txtLLine.value==""){
+	alert("please fill the landline no");
+	return false;
+	}
+	else if(document.frm.rdbRAddress.checked==false && document.frm.rdbOffAddress.checked==false){
+	alert("Please select the Type of Communication ");
+	return false;
+	}
+	else if (document.frm.resAddress.value==""){
+	alert("please enter the Addresss");
+	return false;
+	}
+	else{
+	alert("Personal details are validated.");
+	return true;
+	}
+	}
+	</script>
+    <style type="text/css">
+        .auto-style1 {
+            font-weight: bold;
+            width: 130px;
+        }
+        #Text1 {
+            width: 164px;
+        }
+        #Select1 {
+            width: 127px;
+        }
+        #TextArea1 {
+            height: 75px;
+        }
+        #Select2 {
+            width: 179px;
+        }
+        #Select3 {
+            width: 127px;
+        }
+        #Select4 {
+            width: 127px;
+        }
+        #Text3 {
+            height: 60px;
+        }
+        #Text11 {
+            width: 118px;
+        }
+        #Text12 {
+            width: 118px;
+        }
+        #TextArea2 {
+            height: 75px;
+        }
+        #Text15 {
+            width: 118px;
+        }
+        #Text12 {
+            width: 118px;
+        }
+        .auto-style10 {
+            font-weight: bold;
+        }
+        #Text13 {
+            width: 118px;
+        }
+        #Select8 {
+            width: 127px;
+        }
+        .auto-style11 {
+            width: 184px;
+            font-weight: bold;
+            height: 16px;
+        }
+        .auto-style12 {
+            height: 16px;
+        }
+        #Text14 {
+            width: 118px;
+        }
+        #Text14 {
+            width: 118px;
+        }
+        #Text15 {
+            width: 118px;
+        }
+        #Text15 {
+            width: 118px;
+        }
+        #Text16 {
+            width: 118px;
+        }
+        #Text16 {
+            width: 118px;
+        }
+        #Text16 {
+            width: 225px;
+        }
+        #TextArea2 {
+            height: 75px;
+        }
+        #Select9 {
+            width: 127px;
+        }
+        #Select10 {
+            width: 127px;
+        }
+        #Select11 {
+            width: 127px;
+        }
+        #Select12 {
+            width: 127px;
+        }
+        #Select13 {
+            width: 127px;
+        }
+        #Select14 {
+            width: 127px;
+        }
+        #Select15 {
+            width: 127px;
+        }
+        #Select16 {
+            width: 127px;
+        }
+        #Select17 {
+            width: 127px;
+        }
+        #Text17 {
+            width: 118px;
+        }
+        .auto-style13 {
+            font-weight: bold;
+            width: 184px;
+        }
+        #Radio1 {
+            width: 112px;
+        }
+        #Text17 {
+            width: 118px;
+        }
+        #Text17 {
+            width: 118px;
+        }
+        #Text17 {
+            width: 100px;
+        }
+        #Text18 {
+            width: 118px;
+        }
+        #Text18 {
+            width: 118px;
+        }
+        #Text18 {
+            width: 118px;
+        }
+        #Text18 {
+            width: 100px;
+        }
+        #txtName0 {
+            width: 185px;
+        }
+        #txtName {
+            width: 183px;
+        }
+        #txtFatherName0 {
+            width: 116px;
+        }
+        #txtDOB0 {
+            width: 146px;
+        }
+        </style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:Material_x0020_Type msdt:dt="string">Module Test Practical</mso:Material_x0020_Type>
+<mso:Category msdt:dt="string">Assessment Component</mso:Category>
+<mso:Level msdt:dt="string">L1</mso:Level>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+<Form name="frm" action="PaymentDetails.html" onsubmit="return chkEmpty()">
+    <table border="1" style="width: 41%;">
+        <tr>
+            <td colspan="2" style="text-align: center; font-size: x-large; font-weight: 700">PERSONAL INFORMATION<br /></br>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style13" style="font-family: Calibri">* Category of Applicant :</td>
+            <td>
+                <input id="rdbCategory" checked="true" name="rdbCat" type="radio" value="V1" />Individuals</td>
+        </tr>
+        <tr>
+            <td class="auto-style13" style="font-family: Calibri">* Name of the Applicant :</td>
+            <td>
+                <input id="txtName" name="txtNM" type="text"/></td>
+        </tr>
+                <tr>
+            <td class="auto-style13" style="font-family: Calibri">* Name on the PAN Card :</td>
+            <td>
+                <input id="txtFirstName" Name="txtFName"  type="text"/>&nbsp;&nbsp;&nbsp;
+                <input id="txtLastName" Name="txtLName" placeholder="Last Name" type="text"/></td>
+        </tr>
+                <tr>
+            <td class="auto-style13" style="font-family: Calibri">* Father&#39;s Name :</td>
+            <td>
+                <input id="txtFatherName" name="txtFtName" type="text"/></td>
+        </tr>
+        <tr>
+            <td class="auto-style13" style="font-family: Calibri">* Date of Birth(dd-MM-yyyy) :</td>
+            <td>
+                <input id="txtDOB" name="txtDOB" type="text"/></td>
+        </tr>
+        <tr>
+            <td class="auto-style11" style="font-family: Calibri">* Gender :</td>
+            <td class="auto-style12">
+                <input id="rdbMale" name="rdbML" type="radio" value="V1" />Male
+				<input id="rdbFemale" name="rdbFML" type="radio" value="V1" />Female</td>
+        </tr>
+        <tr>
+            <td class="auto-style11" style="font-family: Calibri">* Mobile No :</td>
+            <td class="auto-style12">
+                <input id="txtMobileNo" name="txtMNo" type="text"/></td>
+        </tr>
+        <tr>
+            <td class="auto-style11" style="font-family: Calibri">* Email ID :</td>
+            <td class="auto-style12">
+                <input id="txtEmail" name="txtEmailID" type="text"/></td>
+        </tr>
+        <tr>
+            <td class="auto-style11" style="font-family: Calibri">* Land Line :</td>
+            <td class="auto-style12">
+                <input id="txtLndLine" name="txtLLine" type="text"/></td>
+        </tr>
+        <tr>
+            <td class="auto-style11" style="font-family: Calibri">* Communicaton :</td>
+            <td class="auto-style12">
+                <input id="rdbResAddress"  name="rdbRAddress" type="radio" value="V1" />Residence 
+				<input id="rdbOfficeAdd"  name="rdbOffAddress" type="radio" value="V1" />Office</td>
+        </tr>
+        <tr>
+            <td class="auto-style11" style="font-family: Calibri">* Residence Addres :</td>
+            <td class="auto-style12">
+                <textarea id="txtAResidenceAdd" name="resAddress" cols="20" name="S1" rows="2"></textarea></td>
+        </tr>
+        
+        <tr>
+            <td class="auto-style10" style="font-family: Calibri" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="auto-style1" id="btnSubmit" 
+				name="bnSubmit" type="Submit" value="Submit" />&nbsp;&nbsp; <input class="auto-style1" id="btnReset" name="bnReset" type="Reset" value="Reset" /></td>
+        </tr>
+    </table></br>
+
+    </body>
+</html>
